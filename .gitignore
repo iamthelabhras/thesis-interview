@@ -1,0 +1,11 @@
+# Tell Git to ignore these folders:
+.cache/
+.parcel-cache/
+dist/
+node_modules/
+
+
+# Tell Git to ignore these files:
+
+.DS_Store
+dev_scratch_pad.txt

@@ -1,0 +1,12 @@
+/* #region IMPORT SASS PARTIALS INTO MAIN.SCSS STYLESHEET.
+
+		Note:   @import is deprecated!  Use @use & @forward instead. */
+
+		@use './base';
+		@use './components';
+		@use './layouts';
+		@use './pages';
+		@use './themes';
+		@use './utilities';
+		
+/* #endregion IMPORT SASS PARTIALS INTO MAIN.SCSS STYLESHEET. */
