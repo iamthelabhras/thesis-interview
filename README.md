@@ -9,3 +9,5 @@ The challenge itself involved creating a sample landing page for a fictional com
 The Figma file I used as the basis for my code ("Frontend Dev Sample.fig") looked like this:
  
 ![](https://larrymg.me/images/thesis_landing_page.png)
+
+*Please note that this repo follows the **[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)** specification for its commit messages." 
