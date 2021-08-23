@@ -200,7 +200,7 @@ footer li {
 }
 
 /* #region MEDIA QUERIES */
-@media screen and (min-width: 0px) and (max-width: 712px) {
+@media screen and (min-width: 0px) and (max-width: 726px) {
   footer {
     justify-content: center;
   }
@@ -488,7 +488,7 @@ nav#desktop_nav {
     padding-right: 50px;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 651px) {
+@media screen and (min-width: 0px) and (max-width: 671px) {
   /* Point at which links in desktop nav wrap beneath Stamp logo. */
   nav#desktop_nav {
     display: none;
