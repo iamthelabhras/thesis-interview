@@ -12,7 +12,7 @@ The Figma file I used as the basis for my code ("Frontend Dev Sample.fig") looke
 
 The landing page I coded up looked like this:
 
-![](https://larrymg.me/images/thesis_landing_page-coded.png)
+![](https://user-images.githubusercontent.com/17169600/130504482-b4952ca3-181c-42f6-bf65-b2dd9cbf218e.png)
 
 ## *Noteworthy Changes, Tweaks, Additions, &c.*
 
