@@ -28,19 +28,25 @@ The original design file rendered the desktop header & footer navigation links i
 
 I opted to use Flexbox as the primary layout tool for this landing page.  In situations like this, I think Flexbox really shines: you get a ton of out-of-the-box responsiveness without unnecessary (or overly brittla) media queries.  The media queries I *did* end up using all revolve around flexbox-specific breakpoints (e.g. when particular flex items wrap) rather than device screen sizes, which I find to be a more robust solution to responsive layout.  This is purely my personal opinion, of course, and the underyling code could quite easily be altered if necessary.
 
-## Additions 
+### Additions 
 
-Although it was not explicitly requested in the challange prompt, I opted to make the password toggle eye icon in the Sign Up form's Password input fully togglable using an additional SVG & a little JavaScript.
+Although it was not explicitly requested in the challange prompt, I opted to make the password toggle eye icon in the Sign Up form's Password input fully togglable using an additional SVG & a little JavaScript:
 
-To enhance the UX and increase the likelihood of engagement / conversion, I added two animations to the landing page.  The hero text ("Simple Way" and "I think what" paragraph elements) animate in left-to-right on page load.  The "Sign Up For Free" CTA above the form fades in several seconds later to draw visitors' attention to the form.
+https://user-images.githubusercontent.com/17169600/130503983-fb9f973f-cc30-4960-87ce-9a61d74a8245.mov
+
+To enhance the UX and increase the likelihood of engagement / conversion, I added two animations to the landing page.  The hero text ("Simple Way" and "I think what" paragraph elements) animate in left-to-right on page load.  The "Sign Up For Free" CTA above the form fades in several seconds later to draw visitors' attention to the form:
+
+https://user-images.githubusercontent.com/17169600/130503955-28634128-0cd0-4b8c-9bf0-f16116b1aeed.mp4
 
 I also added some basic :hover effects on the page's links, as well as a special hover effect on the "Sign Up For Free" form's Sign Up button.
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://larrymg.me/images/stamp_animations.mov" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+https://user-images.githubusercontent.com/17169600/130504018-21f76b10-fcee-424b-aabc-ed5bacae3feb.mov
+
+
+
+
+
+
 
 
 
