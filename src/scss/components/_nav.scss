@@ -1,0 +1,56 @@
+nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	font-family: "Roboto", sans-serif;
+	color: var(--white);
+	font-weight: 400;
+}
+
+nav li {
+	/* Space between nav links in header & footer. */
+	padding-right: var(--link_padding_between_links);
+	font-family: "Roboto", sans-serif;
+}
+
+header nav li {
+	font-size: 20px;
+}
+
+footer nav ul {
+	width: 100%;
+}
+
+footer nav li {
+	font-size: 14px;
+}
+
+nav#hamburger_nav {
+	display: none;
+
+	}
+
+nav#desktop_nav {
+	display: initial;
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+	nav ul li:last-child {
+		/* iPhone 5 tweak. */
+	padding-right: 50px;
+}
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 651px) {
+	/* Point at which links in desktop nav wrap beneath Stamp logo. */
+	nav#desktop_nav {
+		display: none;
+	}
+
+	nav#hamburger_nav {
+		display: initial;
+	}
+
+}
