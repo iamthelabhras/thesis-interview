@@ -1,0 +1,123 @@
+#hero--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 var(--hero_container_padding);
+  margin-bottom: var(--margin_bottom_between_parent_elements);
+}
+
+#hero--text {
+  max-width: 65ch;
+  margin-right: 15px;
+  animation: slidein;
+	animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+#hero--text p:first-child {
+  font-family: "Avenir Substitute", sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  color: var(--white);
+}
+
+#hero--text p:nth-child(2) {
+  margin-top: var(--hero_text_margin_between_big_and_small_text);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--white);
+}
+
+#hero--text p:first-child,
+#hero--text p:nth-child(2){
+text-shadow: var(--text_shadow);
+}
+
+#hero--form h2,
+#hero--form span {
+  text-align: center;
+  align-self: center;
+  color: var(--white);
+}
+
+#hero--form h2 {
+  /* "SIGN UP FOR FREE" */
+  opacity: 0;
+  margin-bottom: var(--sign_up_for_free_margin_bottom);
+  font-family: "Avenir Substitute", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-shadow: var(--text_shadow);
+  animation: fadein;
+	animation-duration: 4s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+#hero--form span {
+  display: block;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+#hero--form span:first-of-type {
+  /* Margin between bottom of form & "By clicking 'Sign Up' */
+  margin-top: var(--clicking_sign_up_margin_top);
+  /* Padding separated "By clicking 'Sign Up' & 'Terms of Service' */
+  padding-bottom: var(--clicking_sign_up_padding_bottom);
+}
+
+#hero--form a#terms_of_service {
+  text-shadow: none;
+}
+
+
+
+
+/* #region MEDIA QUERIES */
+@media screen and (min-width: 0px) and (max-width: 575px) {
+
+  #hero--container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    }
+  
+  #hero--form span:nth-of-type(2){
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  #hero--text {
+    max-width: 45ch;
+  }
+  
+  #hero--text p:first-child {
+    font-size: 45px;}
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+
+
+  header svg#stamp_logo {
+    margin-left: 5vw;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1045px) {
+  #hero--text {
+    margin-bottom: 45px;
+  }
+  #hero--text p:nth-child(2){
+    margin-bottom: 45px;
+}
+}
+
+
+/* #endregion MEDIA QUERIES */
+
+
