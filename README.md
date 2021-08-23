@@ -14,6 +14,8 @@ The landing page I coded up looked like this:
 
 ![](https://user-images.githubusercontent.com/17169600/130509283-b1d0489b-faf8-41f4-87aa-52756fd01766.png)
 
+A working version of this landing page can be accessed at [https://larrymg.me/my_work/thesis/](https://larrymg.me/my_work/thesis/).
+
 ## *Noteworthy Changes, Tweaks, Additions, &c.*
 
 ### Changes
