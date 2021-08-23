@@ -28,6 +28,8 @@ The original design file rendered the desktop header & footer navigation links i
 
 I opted to use Flexbox as the primary layout tool for this landing page.  In situations like this, I think Flexbox really shines: you get a ton of out-of-the-box responsiveness without unnecessary (or overly brittla) media queries.  The media queries I *did* end up using all revolve around flexbox-specific breakpoints (e.g. when particular flex items wrap) rather than device screen sizes, which I find to be a more robust solution to responsive layout.  This is purely my personal opinion, of course, and the underyling code could quite easily be altered if necessary.
 
+I incorporated several tricks I learned via Josh 
+
 ### Additions 
 
 Although it was not explicitly requested in the challange prompt, I opted to make the password toggle eye icon in the Sign Up form's Password input fully togglable using an additional SVG & a little JavaScript:
@@ -42,12 +44,10 @@ I also added some basic :hover effects on the page's links, as well as a special
 
 https://user-images.githubusercontent.com/17169600/130504018-21f76b10-fcee-424b-aabc-ed5bacae3feb.mov
 
+Finally, I added a Favicon to the landing page because, at this point in my web dev career, a page without a Favicon just feels naked:
+
+![stamp_favicon](https://user-images.githubusercontent.com/17169600/130504978-27632bc4-f31e-41c1-9f22-e13a03c1d271.png)
 
 
-
-
-
-
-
-
+***
 *Please note that this repo follows the **[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)** specification for its commit messages.* 
