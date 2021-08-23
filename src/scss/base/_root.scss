@@ -1,11 +1,44 @@
 /* #region CSS CUSTOM VARIABLES */
 
 :root {
-	/* Colors */
+	
+	/* COLORS */
+
 	--black: #1b1b1b;
 	--blue: #2c99ed;
 	--grey: #9b9b9b;
 	--white: #ffffff;
+	--button_hover: #113d5e;
+	--link_hover: #FFFF00;
+	--link_visited: #0000ff; 
+	--link_active:  	#80ff00;
+	--form_transparent_bg: rgba(155, 155, 155, 0.15);
+	
+	/* BORDERS */
+
+	--border_radius: 5px;
+	--button_border_radius: 0 0 4px 4px;
+	
+	/* TEXT & BOX SHADOWS */
+	--form_box_shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	--text_shadow: 0px 4px 4px #000000;
+	
+	/* LAYOUT & SPACING */
+	
+	/* Stamp & © 2021 Stamp left margin. */
+	--viewport_margin_left: 105px;
+				/* Spacing between Header/Hero Container & Hero Container/Footer */
+	--margin_bottom_between_parent_elements: 50px;
+	--link_padding_between_links: 50px;
+				/* How far Stamp Logo, Nav Links, & Hamburger Menu are pushed from top of viewport. */
+	--header_padding_top: 15px;
+				/* Padding to the left and right of the hero container. */
+	--hero_container_padding: 15px;
+	--hero_text_margin_between_big_and_small_text: 30px;
+	--form_left_padding: 15px;
+	--sign_up_for_free_margin_bottom: 15px;
+	--clicking_sign_up_margin_top: 15px;
+	--clicking_sign_up_padding_bottom: 5px;
 }
 
 
