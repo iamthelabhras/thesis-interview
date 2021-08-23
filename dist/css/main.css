@@ -1,0 +1,738 @@
+@charset "UTF-8";
+html {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("https://larrymg.me/images/background_image-original.png");
+  background-color: var(--black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow-x: hidden;
+}
+
+a:link {
+  color: var(--white);
+  text-decoration: none;
+  text-shadow: var(--text_shadow);
+  transition: color 0.5s ease-in-out;
+}
+
+a:visited {
+  color: var(--link_visited);
+}
+
+a:hover,
+a:focus {
+  color: var(--link_hover);
+}
+
+a:active {
+  color: var(--link_active);
+}
+
+/* #region Self-Hosted Fonts - "Roboto" (Roboto) */
+/*  See https://fonts.google.com/specimen/Roboto */
+@font-face {
+  font-family: "Roboto";
+  src: url(../../src/fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../src/fonts/Roboto-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Substitute";
+  src: url(../../src/fonts/Montserrat-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/* #endregion Self-Hosted Fonts - "Candy Cane" (Candy Cane Unregistered) */
+/* #region Browser Resets */
+/* A Modern CSS Reset by Andy Bell
+        https://dev.to/hankchizljaw/a-modern-css-reset-6p3 
+        10/01/2019                                          */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  /* Tightened up initial line-height of 1.5. */
+  line-height: 1.2;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* #endregion */
+/* #region CSS CUSTOM VARIABLES */
+:root {
+  /* COLORS */
+  --black: #1b1b1b;
+  --blue: #2c99ed;
+  --grey: #9b9b9b;
+  --white: #ffffff;
+  --button_hover: #113d5e;
+  --link_hover: #FFFF00;
+  --link_visited: #0000ff;
+  --link_active:	#80ff00;
+  --form_transparent_bg: rgba(155, 155, 155, 0.15);
+  /* BORDERS */
+  --border_radius: 5px;
+  --button_border_radius: 0 0 4px 4px;
+  /* TEXT & BOX SHADOWS */
+  --form_box_shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --text_shadow: 0px 4px 4px #000000;
+  /* LAYOUT & SPACING */
+  /* Stamp & © 2021 Stamp left margin. */
+  --viewport_margin_left: 105px;
+  /* Spacing between Header/Hero Container & Hero Container/Footer */
+  --margin_bottom_between_parent_elements: 50px;
+  --link_padding_between_links: 50px;
+  /* How far Stamp Logo, Nav Links, & Hamburger Menu are pushed from top of viewport. */
+  --header_padding_top: 15px;
+  /* Padding to the left and right of the hero container. */
+  --hero_container_padding: 15px;
+  --hero_text_margin_between_big_and_small_text: 30px;
+  --form_left_padding: 15px;
+  --sign_up_for_free_margin_bottom: 15px;
+  --clicking_sign_up_margin_top: 15px;
+  --clicking_sign_up_padding_bottom: 5px;
+}
+
+/* #endregion CSS CUSTOM VARIABLES */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer span {
+  align-self: center;
+  /* Pushes "© 2021 Stamp" away from viewport.  Value identical to Stamp logo's margin-left. */
+  margin-left: var(--viewport_margin_left);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: var(--white);
+}
+
+footer li {
+  text-transform: uppercase;
+}
+
+/* #region MEDIA QUERIES */
+@media screen and (min-width: 0px) and (max-width: 712px) {
+  footer {
+    justify-content: center;
+  }
+
+  footer span {
+    /* Remove viewport_margin_left. */
+    margin-left: initial;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 829px) {
+  footer span,
+footer nav ul li {
+    text-align: center;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 901px) {
+  footer span {
+    margin-left: initial;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  footer span {
+    margin-left: 5vw;
+  }
+}
+/* #endregion MEDIA QUERIES */
+#hero--form {
+  display: grid;
+  place-items: center;
+}
+
+#hero--form form {
+  display: flex;
+  flex-direction: column;
+  min-width: 460px;
+  border: 1px solid var(--grey);
+  border-radius: var(--border_radius);
+}
+
+#hero--form input {
+  min-width: 460px;
+  height: 48px;
+  padding-left: var(--form_left_padding);
+  border: none;
+  border-bottom: solid 1px var(--grey);
+  background: var(--form_transparent_bg);
+  box-shadow: var(--form_box_shadow);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(2.5px);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+#password_container {
+  position: relative;
+}
+
+#password_container svg.eye {
+  position: absolute;
+  right: 20px;
+  top: 25%;
+  fill: var(--grey);
+}
+
+#password_container rect.btn {
+  /* This element is what is actually being clicked to toggle between the two eye SVGs. */
+  stroke: var(--grey);
+  fill: var(--grey);
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+#hero--form button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border: none;
+  border-radius: var(--button_border_radius);
+  background-color: var(--blue);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--white);
+  cursor: pointer;
+  overflow: hidden !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hero--form button:hover {
+  background: var(--button_hover);
+}
+
+/* Right arrow SVG next to "Sign Up". */
+#hero--form button img {
+  width: 12px;
+  filter: invert(100%);
+  transform: translateY(1px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Enlarge and move right arrow to right on hover. */
+#hero--form button:hover img {
+  width: 20px;
+  transform: translateX(30px);
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #hero--form form {
+    /* Resize form to prevent it from running flash against viewport. */
+    min-width: initial;
+    width: 90vw;
+  }
+
+  #hero--form input {
+    min-width: initial;
+    width: 100%;
+  }
+}
+#menuToggle {
+  padding-right: 15px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform hamburger spans on toggle. */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* Hide 'extra' hamburger menu span to form "X" on toggle. */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* Position nav menu that displays on hamburger toggle. */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -200px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  background: rgba(237, 237, 237, 0.96);
+  background: rgba(155, 155, 155, 0.96);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+ul#menu {
+  position: absolute;
+  display: initial;
+  height: 200vh;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400px;
+}
+
+/* Slide menu in. */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: var(--margin_bottom_between_parent_elements);
+  /* Dictates how far from top of viewport Stamp Logo & Nav Links / Hamburger Menu are pushed. */
+  padding-top: var(--header_padding_top);
+}
+
+header svg#stamp_logo {
+  margin-left: var(--viewport_margin_left);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+  font-weight: 400;
+}
+
+nav li {
+  /* Space between nav links in header & footer. */
+  padding-right: var(--link_padding_between_links);
+  font-family: "Roboto", sans-serif;
+}
+
+header nav li {
+  font-size: 20px;
+}
+
+footer nav ul {
+  width: 100%;
+}
+
+footer nav li {
+  font-size: 14px;
+}
+
+nav#hamburger_nav {
+  display: none;
+}
+
+nav#desktop_nav {
+  display: initial;
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  nav ul li:last-child {
+    /* iPhone 5 tweak. */
+    padding-right: 50px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 651px) {
+  /* Point at which links in desktop nav wrap beneath Stamp logo. */
+  nav#desktop_nav {
+    display: none;
+  }
+
+  nav#hamburger_nav {
+    display: initial;
+  }
+}
+#hero--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 var(--hero_container_padding);
+  margin-bottom: var(--margin_bottom_between_parent_elements);
+}
+
+#hero--text {
+  max-width: 65ch;
+  margin-right: 15px;
+  animation: slidein;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+#hero--text p:first-child {
+  font-family: "Avenir Substitute", sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  color: var(--white);
+}
+
+#hero--text p:nth-child(2) {
+  margin-top: var(--hero_text_margin_between_big_and_small_text);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--white);
+}
+
+#hero--text p:first-child,
+#hero--text p:nth-child(2) {
+  text-shadow: var(--text_shadow);
+}
+
+#hero--form h2,
+#hero--form span {
+  text-align: center;
+  align-self: center;
+  color: var(--white);
+}
+
+#hero--form h2 {
+  /* "SIGN UP FOR FREE" */
+  opacity: 0;
+  margin-bottom: var(--sign_up_for_free_margin_bottom);
+  font-family: "Avenir Substitute", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-shadow: var(--text_shadow);
+  animation: fadein;
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+#hero--form span {
+  display: block;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+#hero--form span:first-of-type {
+  /* Margin between bottom of form & "By clicking 'Sign Up' */
+  margin-top: var(--clicking_sign_up_margin_top);
+  /* Padding separated "By clicking 'Sign Up' & 'Terms of Service' */
+  padding-bottom: var(--clicking_sign_up_padding_bottom);
+}
+
+#hero--form a#terms_of_service {
+  text-shadow: none;
+}
+
+/* #region MEDIA QUERIES */
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  #hero--container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  #hero--form span:nth-of-type(2) {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  #hero--text {
+    max-width: 45ch;
+  }
+
+  #hero--text p:first-child {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  header svg#stamp_logo {
+    margin-left: 5vw;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1045px) {
+  #hero--text {
+    margin-bottom: 45px;
+  }
+
+  #hero--text p:nth-child(2) {
+    margin-bottom: 45px;
+  }
+}
+/* #endregion MEDIA QUERIES */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+.responsive--show_desktop,
+.responsive--show_laptop {
+  display: initial;
+}
+
+.responsive--show_tablet,
+.responsive--show_mobile {
+  display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  /* MEDIA QUERIES -- Mobile -- Mobile Show & Hides */
+  .responsive--show_tablet {
+    display: none !important;
+  }
+
+  .responsive--show_laptop {
+    display: none !important;
+  }
+
+  .responsive--show_desktop {
+    display: none !important;
+  }
+
+  .responsive--show_mobile {
+    display: initial !important;
+  }
+
+  .responsive--hide_mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  /* MEDIA QUERIES - Tablet Show & Hides */
+  .responsive--show_mobile {
+    display: none !important;
+  }
+
+  .responsive--show_laptop {
+    display: none !important;
+  }
+
+  .responsive--show_desktop {
+    display: none !important;
+  }
+
+  .responsive--show_tablet {
+    display: initial !important;
+  }
+
+  .responsive--hide_tablet {
+    display: none !important;
+  }
+
+  .responsive--tablet_flex_direction_column {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  /* MEDIA QUERIES - Laptop Show & Hides */
+  .responsive--show_mobile {
+    display: none !important;
+  }
+
+  .responsive--show_tablet {
+    display: none !important;
+  }
+
+  .responsive--show_desktop {
+    display: none !important;
+  }
+
+  .responsive--show_laptop {
+    display: initial !important;
+  }
+
+  .responsive--hide_laptop {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .responsive--show_mobile {
+    display: none !important;
+  }
+
+  .responsive--show_tablet {
+    display: none !important;
+  }
+
+  .responsive--show_laptop {
+    display: none !important;
+  }
+
+  .responsive--show_desktop {
+    display: initial !important;
+  }
+
+  .responsive--hide_desktop {
+    display: none !important;
+  }
+}
+.hide {
+  display: none;
+}
+
+.show {
+  display: intial;
+}
+
+/* #region IMPORT SASS PARTIALS INTO MAIN.SCSS STYLESHEET.
+
+		Note:   @import is deprecated!  Use @use & @forward instead. */
+/* #endregion IMPORT SASS PARTIALS INTO MAIN.SCSS STYLESHEET. */
+
+/*# sourceMappingURL=main.css.map */
