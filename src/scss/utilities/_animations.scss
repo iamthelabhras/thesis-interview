@@ -1,0 +1,17 @@
+@keyframes fadein{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 100;
+	}
+}
+
+@keyframes slidein{
+	from {
+		transform: translate(-100%);
+	}
+	to {
+		transform: translate(0%);
+	}
+}
