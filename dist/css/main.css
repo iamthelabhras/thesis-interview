@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("https://larrymg.me/images/background_image-original.png");
+  background-image: url("https://larrymg.me/images/background_image-original--compressed.png");
   background-color: var(--black);
   background-repeat: no-repeat;
   background-size: cover;
