@@ -12,7 +12,7 @@ The Figma file I used as the basis for my code ("Frontend Dev Sample.fig") looke
 
 The landing page I coded up looked like this:
 
-![](https://larrymg.me/images/thesis_landing_page-coded.png)
+![](https://user-images.githubusercontent.com/17169600/130504482-b4952ca3-181c-42f6-bf65-b2dd9cbf218e.png)
 
 ## *Noteworthy Changes, Tweaks, Additions, &c.*
 
@@ -28,20 +28,26 @@ The original design file rendered the desktop header & footer navigation links i
 
 I opted to use Flexbox as the primary layout tool for this landing page.  In situations like this, I think Flexbox really shines: you get a ton of out-of-the-box responsiveness without unnecessary (or overly brittla) media queries.  The media queries I *did* end up using all revolve around flexbox-specific breakpoints (e.g. when particular flex items wrap) rather than device screen sizes, which I find to be a more robust solution to responsive layout.  This is purely my personal opinion, of course, and the underyling code could quite easily be altered if necessary.
 
-## Additions 
+I incorporated several tricks I learned via Josh 
 
-Although it was not explicitly requested in the challange prompt, I opted to make the password toggle eye icon in the Sign Up form's Password input fully togglable using an additional SVG & a little JavaScript.
+### Additions 
 
-To enhance the UX and increase the likelihood of engagement / conversion, I added two animations to the landing page.  The hero text ("Simple Way" and "I think what" paragraph elements) animate in left-to-right on page load.  The "Sign Up For Free" CTA above the form fades in several seconds later to draw visitors' attention to the form.
+Although it was not explicitly requested in the challange prompt, I opted to make the password toggle eye icon in the Sign Up form's Password input fully togglable using an additional SVG & a little JavaScript:
+
+https://user-images.githubusercontent.com/17169600/130503983-fb9f973f-cc30-4960-87ce-9a61d74a8245.mov
+
+To enhance the UX and increase the likelihood of engagement / conversion, I added two animations to the landing page.  The hero text ("Simple Way" and "I think what" paragraph elements) animate in left-to-right on page load.  The "Sign Up For Free" CTA above the form fades in several seconds later to draw visitors' attention to the form:
+
+https://user-images.githubusercontent.com/17169600/130503955-28634128-0cd0-4b8c-9bf0-f16116b1aeed.mp4
 
 I also added some basic :hover effects on the page's links, as well as a special hover effect on the "Sign Up For Free" form's Sign Up button.
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://larrymg.me/images/stamp_animations.mov" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+https://user-images.githubusercontent.com/17169600/130504018-21f76b10-fcee-424b-aabc-ed5bacae3feb.mov
+
+Finally, I added a Favicon to the landing page because, at this point in my web dev career, a page without a Favicon just feels naked:
+
+![stamp_favicon](https://user-images.githubusercontent.com/17169600/130504978-27632bc4-f31e-41c1-9f22-e13a03c1d271.png)
 
 
-
+***
 *Please note that this repo follows the **[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)** specification for its commit messages.* 
