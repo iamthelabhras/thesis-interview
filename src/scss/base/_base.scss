@@ -1,0 +1,36 @@
+html {
+	overflow-x: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-image: url("https://larrymg.me/images/background_image-original.png"); 
+	background-color: var(--black);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	overflow-x: hidden;
+}
+
+a:link {
+	color: var(--white);
+	text-decoration: none;
+	text-shadow: var(--text_shadow);
+	transition: color .5s ease-in-out;
+}
+
+a:visited {
+	color: var(--link_visited);
+}
+
+a:hover,
+a:focus {
+	color: var(--link_hover);
+}
+
+a:active {
+	color: var(--link_active);
+}
+
