@@ -1,0 +1,21 @@
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: var(--margin_bottom_between_parent_elements);
+	/* Dictates how far from top of viewport Stamp Logo & Nav Links / Hamburger Menu are pushed. */
+	padding-top: var(--header_padding_top);
+}
+
+header svg#stamp_logo {
+	margin-left: var(--viewport_margin_left);
+}
+
+
+
+
+
+
+
