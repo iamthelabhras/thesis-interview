@@ -525,6 +525,7 @@ nav#desktop_nav {
 
 #hero--text p:nth-child(2) {
   opacity: 0.8;
+  max-width: 35ch;
   margin-top: var(--hero_text_margin_between_big_and_small_text);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
