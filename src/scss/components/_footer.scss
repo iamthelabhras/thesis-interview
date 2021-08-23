@@ -1,0 +1,55 @@
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer span {
+	align-self: center;
+	/* Pushes "© 2021 Stamp" away from viewport.  Value identical to Stamp logo's margin-left. */
+	margin-left: var(--viewport_margin_left);
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	color: var(--white);
+}
+
+footer li {
+	text-transform: uppercase;
+}
+
+/* #region MEDIA QUERIES */
+
+@media screen and (min-width: 0px) and (max-width: 712px) {
+	footer {
+		justify-content: center;
+	}
+
+	footer span {
+		/* Remove viewport_margin_left. */
+		margin-left: initial;
+
+}
+}
+
+@media screen and (min-width: 0px) and (max-width: 829px) {
+	footer span,
+	footer nav ul li {
+		text-align: center;
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 901px) {
+	footer span {
+		margin-left: initial;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  footer span {
+    margin-left: 5vw;
+  }
+}
+
+/* #endregion MEDIA QUERIES */
+
