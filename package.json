@@ -2,16 +2,20 @@
   "name": "thesis_interview",
   "version": "1.0.0",
   "description": "A second round coding challenge from Thesis.",
-  "main": "index.html",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "sasswatch": "sass --watch src/scss:dist/css/" 
+    "sasswatch": "sass --watch src/scss:dist/css/"
   },
   "author": "Labhrás (Larry)",
   "license": "ISC",
   "dependencies": {
     "parcel": "^2.0.0-rc.0",
     "sass": "^1.38.0"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.0-rc.0",
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-webmanifest": "^2.0.0-rc.0"
   }
 }
