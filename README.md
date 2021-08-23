@@ -12,7 +12,7 @@ The Figma file I used as the basis for my code ("Frontend Dev Sample.fig") looke
 
 The landing page I coded up looked like this:
 
-![](https://user-images.githubusercontent.com/17169600/130504482-b4952ca3-181c-42f6-bf65-b2dd9cbf218e.png)
+![](https://user-images.githubusercontent.com/17169600/130509283-b1d0489b-faf8-41f4-87aa-52756fd01766.png)
 
 ## *Noteworthy Changes, Tweaks, Additions, &c.*
 
@@ -28,9 +28,13 @@ The original design file rendered the desktop header & footer navigation links i
 
 I opted to use Flexbox as the primary layout tool for this landing page.  In situations like this, I think Flexbox really shines: you get a ton of out-of-the-box responsiveness without unnecessary (or overly brittla) media queries.  The media queries I *did* end up using all revolve around flexbox-specific breakpoints (e.g. when particular flex items wrap) rather than device screen sizes, which I find to be a more robust solution to responsive layout.  This is purely my personal opinion, of course, and the underyling code could quite easily be altered if necessary.
 
-I incorporated several tricks I learned via Josh 
+I incorporated material from [Josh Buchea's HEAD repo](https://github.com/joshbuchea/HEAD) into `index.html`'s `<head>` element.
 
 ### Additions 
+
+When you have a hamburger menu, you need a hamburger toggle:
+
+https://user-images.githubusercontent.com/17169600/130507915-b1da05e9-202b-4305-bd3e-78fcc79331ba.mov
 
 Although it was not explicitly requested in the challange prompt, I opted to make the password toggle eye icon in the Sign Up form's Password input fully togglable using an additional SVG & a little JavaScript:
 
