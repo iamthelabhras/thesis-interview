@@ -15,6 +15,7 @@ footer span {
 
 footer li {
 	text-transform: uppercase;
+	letter-spacing: var(--letter_spacing_spread);
 }
 
 /* #region MEDIA QUERIES */
